@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app-5">
+    <button v-on:click="reverseMessage">反转消息</button><br>
+    <input type="radio" name="sex" v-model="sex"  value="男">男
+    <input type="radio" name="sex" v-model="sex" value="女">女 <br>
+    选中性别:{{sex}}<br/><br/>
+
+
+    <select name="select" v-model="select">
+        <option value="" disabled>---请选择----</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+    </select>
+    <br/>
+    选中了：{{select}}
+
+</div>
+
+
+<script>
+    var app5 = new Vue({
+        el: '#app-5',
+        data: {
+            message: 'Hello Vue.js!',
+            sex:"男",
+            select:'',
+        },
+        methods: {
+            reverseMessage: function () {
+                alert(this.message)
+            }
+        }
+    })
+</script>
+</body>
+</html>

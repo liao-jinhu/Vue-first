@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app">
+    <p v-if="seen==='A'">A</p>
+    <p v-else-if="seen==='B'">B</p>
+    <p v-else="seen==='C'">C</p>
+</div>
+
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            seen:'B'
+        }
+    })
+
+</script>
+</body>
+</html>

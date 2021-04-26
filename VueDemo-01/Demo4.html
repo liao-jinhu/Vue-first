@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app-5">
+
+    <button v-on:click="reverseMessage">反转消息</button><br/>
+    输入的文本:<br/><textarea cols="30" rows="10" type="text" v-model="message" ></textarea><br/>     <!--双向绑定数据-->
+    {{message}}<br/>
+
+</div>
+
+
+<script>
+    var app = new Vue({
+        el: '#app-5',
+        data: {
+            message:"",
+        },
+        methods: {
+            reverseMessage: function () {
+                alert(this.message)
+            }
+        }
+    })
+</script>
+</body>
+</html>

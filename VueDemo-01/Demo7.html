@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+<div id="app">
+    <liao v-for="subjects in subject " v-bind:post="subjects"></liao>
+
+</div>
+
+
+<script>
+    Vue.component('liao', {
+        props: ['post'],
+        template: '<li>{{post}}</li>'
+    })
+
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            subject: ["java", "linux", "HTML", "Hadoop"]
+        }
+    })
+
+</script>
+
+</body>
+</html>
