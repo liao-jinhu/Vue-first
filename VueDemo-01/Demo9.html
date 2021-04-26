@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+<div id="app">
+    <p>Time1:{{Time1()}}</p>
+    <p>Time2:{{Time2}}</p>
+</div>
+
+
+<script>
+    var app = new Vue(
+        {
+            el: "#app",
+            data: {
+                message: "message"
+            },
+
+            methods: {
+                Time1: function () {
+                    return Date.now();//返回一个时间戳
+                }
+            },
+
+            computed:{
+                Time2:function (){//计算属性：methods，computed方法名不能重名，重名之后，只会调用methods的方法
+                this.message;
+                return Date.now();
+            }
+            }
+        }
+
+    );
+
+</script>
+
+</body>
+</html>
